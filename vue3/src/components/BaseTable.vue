@@ -18,11 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useCounterStore } from '@/stores/counter';
 import BaseCell from '@/components/BaseCell.vue'
 
 const counterStore = useCounterStore()
-const cols = computed(() => [...Array(100)])
-const rows = computed(() => [...Array(100)])
+const cols = [...Array(500)]
+const rows = [...Array(500)]
 </script>
