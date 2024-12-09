@@ -2,8 +2,8 @@ import { Index } from 'solid-js'
 import { counter } from '../../store'
 import BaseCell from '../BaseCell'
 
-const cols = [...Array(500)]
-const rows = [...Array(500)]
+const cols = [...Array(100)]
+const rows = [...Array(100)]
 
 function About() {
     return (

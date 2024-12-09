@@ -2,8 +2,8 @@ import React from "react";
 import { useCounterStore } from "../../store/counter";
 import BaseCell from "../BaseCell/BaseCell";
 
-const cols = [...Array(500)];
-const rows = [...Array(500)];
+const cols = [...Array(100)];
+const rows = [...Array(100)];
 
 function About() {
   const { computed } = useCounterStore();

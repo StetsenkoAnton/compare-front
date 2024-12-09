@@ -22,6 +22,6 @@ import { useCounterStore } from '@/stores/counter';
 import BaseCell from '@/components/BaseCell.vue'
 
 const counterStore = useCounterStore()
-const cols = [...Array(500)]
-const rows = [...Array(500)]
+const cols = [...Array(100)]
+const rows = [...Array(100)]
 </script>
