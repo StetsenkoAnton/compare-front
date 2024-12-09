@@ -1,0 +1,1 @@
+import{i as a,c as i,t as l}from"./index-DcFwX9yi.js";var n=l("<div><h1>This is an about page</h1><p>");const s=()=>(()=>{var t=n(),e=t.firstChild,r=e.nextSibling;return a(r,()=>i.doubleCount),t})();export{s as default};

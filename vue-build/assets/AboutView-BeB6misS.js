@@ -1,0 +1,1 @@
+import{d as n,u as a,c as s,a as t,t as r,b as u,o as l}from"./index-DKHcr68m.js";const d=n({__name:"AboutView",setup(p){const o=a();return(i,e)=>(l(),s("div",null,[e[0]||(e[0]=t("h1",null,"This is an about page",-1)),t("p",null,r(u(o).doubleCount),1)]))}});export{d as default};
