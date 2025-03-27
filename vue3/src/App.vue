@@ -1,5 +1,5 @@
 <template>
-  <TheHeader>
+  <TheHeader v-once>
     <CounterCTA/>
   </TheHeader>
   <main>

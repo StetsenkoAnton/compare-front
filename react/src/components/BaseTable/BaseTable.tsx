@@ -6,8 +6,8 @@ const cols = [...Array(100)];
 const rows = [...Array(100)];
 
 function About() {
-  const { computed } = useCounterStore();
-  return (
+  const { count } = useCounterStore();
+    return (
     <table>
       <thead>
         <tr>
@@ -22,7 +22,7 @@ function About() {
             {cols.map((c, cellN) => (
               <BaseCell
                 key={cellN}
-                msg={rowN % 3 ? cellN : cellN * computed.doubleCount}
+                msg={rowN % 3 ? cellN : cellN * count}
               />
             ))}
           </tr>

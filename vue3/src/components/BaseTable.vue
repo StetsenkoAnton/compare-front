@@ -7,19 +7,22 @@
     </thead>
     <tbody>
       <tr v-for="(_, rowN) in rows" :key="rowN">
-        <BaseCell
-          v-for="(_, cellN) in cols"
-          :key="cellN"
-          :msg="rowN % 3 ? cellN : cellN * counterStore.doubleCount"
-        />
+        <td v-for="(_, cellN) in cols" :key="`${rowN}${cellN}`">
+          {{ rowN % 3 ? cellN : cellN * counterStore.doubleCount }}
+        </td>
+        <!--        <BaseCell-->
+        <!--          v-for="(_, cellN) in cols"-->
+        <!--          :key="`${rowN}${cellN}`"-->
+        <!--          :msg="rowN % 3 ? cellN : cellN * counterStore.doubleCount"-->
+        <!--        />-->
       </tr>
     </tbody>
   </table>
 </template>
 
 <script setup lang="ts">
-import { useCounterStore } from '@/stores/counter';
-import BaseCell from '@/components/BaseCell.vue'
+import { useCounterStore } from '@/stores/counter'
+// import BaseCell from '@/components/BaseCell.vue'
 
 const counterStore = useCounterStore()
 const cols = [...Array(100)]
