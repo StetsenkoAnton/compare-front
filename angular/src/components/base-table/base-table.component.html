@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let _ of cols; let i = index; trackBy: trackByItems">
+                {{ i }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+      @for (row of rows; let rowN = $index; track rowN) {
+        <tr>
+          @for (cell of cols; let cellN = $index; track cellN) {
+            <td>
+              <app-base-cell
+                [msg]="rowN % 3 ? cellN : cellN * 2"
+              />
+            </td>
+          }
+        </tr>
+      }
+    </tbody>
+</table>
