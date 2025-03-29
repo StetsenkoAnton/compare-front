@@ -24,7 +24,7 @@ function About() {
               //   key={cellN}
               //   msg={rowN % 3 ? cellN : cellN * count}
               // />
-              <td key={cellN}>{rowN % 3 ? cellN : cellN * count}</td>
+              <td>{rowN % 3 ? cellN : cellN * count}</td>
             ))}
           </tr>
         ))}

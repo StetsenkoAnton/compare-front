@@ -7,7 +7,7 @@
     </thead>
     <tbody>
       <tr v-for="(_, rowN) in rows" :key="rowN">
-        <td v-for="(_, cellN) in cols" :key="`${rowN}${cellN}`">
+        <td v-for="(_, cellN) in cols">
           {{ rowN % 3 ? cellN : cellN * counterStore.doubleCount }}
         </td>
         <!--        <BaseCell-->
