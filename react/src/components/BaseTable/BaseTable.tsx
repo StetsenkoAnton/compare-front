@@ -17,9 +17,9 @@ function About() {
         </tr>
       </thead>
       <tbody>
-        {rows.map((r, rowN) => (
+        {rows.map((_, rowN) => (
           <tr key={rowN}>
-            {cols.map((c, cellN) => (
+            {cols.map((_, cellN) => (
               <BaseCell
                 key={cellN}
                 msg={rowN % 3 ? cellN : cellN * count}
