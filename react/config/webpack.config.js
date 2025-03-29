@@ -27,7 +27,7 @@ const ForkTsCheckerWebpackPlugin =
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
-// const { defineReactCompilerLoaderOption, reactCompilerLoader } = require('react-compiler-webpack');
+const { defineReactCompilerLoaderOption, reactCompilerLoader } = require('react-compiler-webpack');
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
@@ -560,22 +560,22 @@ module.exports = function (webpackEnv) {
             // Make sure to add the new loader(s) before the "file" loader.
           ],
         },
-        // {
-        //   test: /\.[mc]?[jt]sx?$/i,
-        //   exclude: /node_modules/,
-        //   use: [
-        //     // babel-loader, swc-loader, esbuild-loader, or anything you like to transpile JSX should go here.
-        //     // If you are using rspack, the rspack's buiilt-in react transformation is sufficient.
-        //     // { loader: 'swc-loader' },
-        //     // Now add reactCompilerLoader
-        //     {
-        //       loader: reactCompilerLoader,
-        //       options: defineReactCompilerLoaderOption({
-        //         // React Compiler options goes here
-        //       })
-        //     }
-        //   ]
-        // }
+        {
+          test: /\.[mc]?[jt]sx?$/i,
+          exclude: /node_modules/,
+          use: [
+            // babel-loader, swc-loader, esbuild-loader, or anything you like to transpile JSX should go here.
+            // If you are using rspack, the rspack's buiilt-in react transformation is sufficient.
+            // { loader: 'swc-loader' },
+            // Now add reactCompilerLoader
+            {
+              loader: reactCompilerLoader,
+              options: defineReactCompilerLoaderOption({
+                // React Compiler options goes here
+              })
+            }
+          ]
+        }
       ].filter(Boolean),
     },
     plugins: [
