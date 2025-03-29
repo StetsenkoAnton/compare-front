@@ -1,6 +1,6 @@
 import { Index } from 'solid-js'
 import { counter } from '../../store'
-import BaseCell from '../BaseCell'
+// import BaseCell from '../BaseCell'
 
 const cols = [...Array(100)]
 const rows = [...Array(100)]

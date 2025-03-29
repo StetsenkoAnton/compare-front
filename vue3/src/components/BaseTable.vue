@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { useCounterStore } from '@/stores/counter'
-import BaseCell from '@/components/BaseCell.vue'
+// import BaseCell from '@/components/BaseCell.vue'
 
 const counterStore = useCounterStore()
 const cols = [...Array(100)]
