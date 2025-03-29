@@ -7,14 +7,14 @@
     </thead>
     <tbody>
       <tr v-for="(_, rowN) in rows" :key="rowN">
-        <!--        <td v-for="(_, cellN) in cols" :key="`${rowN}${cellN}`">-->
-        <!--          {{ rowN % 3 ? cellN : cellN * counterStore.doubleCount }}-->
-        <!--        </td>-->
-        <BaseCell
-          v-for="(_, cellN) in cols"
-          :key="`${rowN}${cellN}`"
-          :msg="rowN % 3 ? cellN : cellN * counterStore.doubleCount"
-        />
+        <td v-for="(_, cellN) in cols" :key="`${rowN}${cellN}`">
+          {{ rowN % 3 ? cellN : cellN * counterStore.doubleCount }}
+        </td>
+        <!--        <BaseCell-->
+        <!--          v-for="(_, cellN) in cols"-->
+        <!--          :key="`${rowN}${cellN}`"-->
+        <!--          :msg="rowN % 3 ? cellN : cellN * counterStore.doubleCount"-->
+        <!--        />-->
       </tr>
     </tbody>
   </table>
