@@ -19,18 +19,18 @@ function BaseTable() {
                         <tr>
                             <Index each={cols}>
                                 {(_, cellN) => (
-                                    <BaseCell
-                                        msg={
-                                            rowN % 3
-                                                ? cellN
-                                                : cellN * counter.doubleCount
-                                        }
-                                    />
-                                    // <td>
-                                    //     {rowN % 3
-                                    //         ? cellN
-                                    //         : cellN * counter.doubleCount}
-                                    // </td>
+                                    // <BaseCell
+                                    //     msg={
+                                    //         rowN % 3
+                                    //             ? cellN
+                                    //             : cellN * counter.doubleCount
+                                    //     }
+                                    // />
+                                    <td>
+                                        {rowN % 3
+                                            ? cellN
+                                            : cellN * counter.doubleCount}
+                                    </td>
                                 )}
                             </Index>
                         </tr>
