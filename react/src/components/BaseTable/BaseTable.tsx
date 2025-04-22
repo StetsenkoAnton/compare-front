@@ -1,6 +1,6 @@
 import React from "react";
 import { useCounterStore } from "../../store/counter";
-// import BaseCell from "../BaseCell/BaseCell";
+import BaseCell from "../BaseCell/BaseCell";
 
 const cols = [...Array(100)];
 const rows = [...Array(100)];
@@ -20,11 +20,11 @@ function About() {
         {rows.map((_, rowN) => (
           <tr key={rowN}>
             {cols.map((_, cellN) => (
-              // <BaseCell
-              //   key={cellN}
-              //   msg={rowN % 3 ? cellN : cellN * count}
-              // />
-              <td>{rowN % 3 ? cellN : cellN * count}</td>
+              <BaseCell
+                key={cellN}
+                msg={rowN % 3 ? cellN : cellN * count}
+              />
+              // <td>{rowN % 3 ? cellN : cellN * count}</td>
             ))}
           </tr>
         ))}
